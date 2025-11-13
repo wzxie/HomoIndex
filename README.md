@@ -43,11 +43,11 @@ See more information at https://github.com/wzxie/HomoIndex.
 
 ## Inputs and Outputs
 ### Input files
-single gene
+1) single gene
 ```
 GWHPCBHR067821
 ```
-multiple genes
+2) multiple genes
 ```
 less genes.txt
 GWHPCBHR001935
