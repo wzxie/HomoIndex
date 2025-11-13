@@ -87,7 +87,7 @@ def main():
     genus_dir = os.path.join("genus", args.genus)
     database_path = os.path.join(genus_dir, "Orthogroups.tsv")
 
-    # 检查属目录是否存在
+    # Check whether the genus directory exists
     if not os.path.exists(genus_dir):
         print(f"[ERROR] Genus '{args.genus}' directory not found!")
         print("Available genus names:")
@@ -95,7 +95,7 @@ def main():
             print(f"  - {g}")
         sys.exit(1)
 
-    # 检查 Orthogroups.tsv 是否存在
+    # Check whether Orthogroups.tsv exists
     if not os.path.exists(database_path):
         print(f"[ERROR] Missing file: {database_path}")
         print("Make sure Orthogroups.tsv exists in this genus folder.")
@@ -104,7 +104,7 @@ def main():
     os.makedirs(args.outdir, exist_ok=True)
     summary_data = []
 
-    # 查询单基因或多基因
+    # Confirm whether the input is a single gene or multiple genes
     if args.gene:
         result = query_gene(database_path, args.gene, args.outdir)
         if result:
@@ -121,7 +121,7 @@ def main():
         print("[ERROR] Please provide either --gene or --gene_list")
         sys.exit(1)
 
-    # 4️⃣ 生成 summary.tsv
+    # get summary.tsv
     if summary_data:
         summary_df = pd.DataFrame(summary_data)
         summary_file = os.path.join(args.outdir, "summary.tsv")
@@ -131,4 +131,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
