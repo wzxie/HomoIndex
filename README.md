@@ -62,7 +62,7 @@ GWHPCBHR032614
 ```
 
 ## Contact
-* Yu-Miao Zhang:    13091255317@163.com
+* Yue-Miao Zhang:    13091255317@163.com
 * Ming-Zhu Yan:     ymz7113@163.com
 * Zi-Xin Yu:        18713111991@163.com
 * Jun-Jie Liu:      liu1344990157@163.com
