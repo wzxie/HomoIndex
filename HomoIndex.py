@@ -4,11 +4,11 @@
 """
 Script: HomoIndex.py
 Function:
-1. Count total species and orthogroups from Orthogroups.tsv of a given genus.
+1. Count total species and orthogroups from modified_Orthogroups.tsv of a given genus.
 2. Query one or more gene IDs and output homologous genes in the same orthogroup.
-3. Automatically locate the Orthogroups.tsv file from ./genus/<genus_name>/.
+3. Automatically locate the modified_Orthogroups.tsv file from ./genus/<genus_name>/.
 4. Write results to individual text files and generate a summary table (summary.tsv).
-5. Provide clear error messages for missing genus or missing Orthogroups.tsv.
+5. Provide clear error messages for missing genus or missing modified_Orthogroups.tsv.
 
 Usage:
     python HomoIndex.py --genus Arabidopsis --gene GWHPCBHR067821
@@ -85,7 +85,7 @@ def main():
     args = parser.parse_args()
 
     genus_dir = os.path.join("genus", args.genus)
-    database_path = os.path.join(genus_dir, "Orthogroups.tsv")
+    database_path = os.path.join(genus_dir, "modified_Orthogroups.tsv")
 
     # Check whether the genus directory exists
     if not os.path.exists(genus_dir):
@@ -95,7 +95,7 @@ def main():
             print(f"  - {g}")
         sys.exit(1)
 
-    # Check whether Orthogroups.tsv exists
+    # Check whether modified_Orthogroups.tsv exists
     if not os.path.exists(database_path):
         print(f"[ERROR] Missing file: {database_path}")
         print("Make sure Orthogroups.tsv exists in this genus folder.")
