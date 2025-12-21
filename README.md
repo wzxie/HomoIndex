@@ -14,11 +14,11 @@ Run the following command to install HomIndex.
 ## Example
 ### 1. Perform a homology search for a single gene.
 ```
-python HomoIndex.py --genus Oryza --gene GWHPCBHR067821
+python HomoIndex.py --genus Brassica --gene GWHPEQVL000440
 ```
 ### 2. Perform a homology search for multiple genes
 ```
-python HomoIndex.py --genus Oryza --gene_list genes.txt
+python HomoIndex.py --genus Brassica --gene_list genes.txt
 ```
 
 ## Usage
@@ -45,19 +45,19 @@ See more information at https://github.com/wzxie/HomoIndex.
 ### Input files
 1) single gene
 ```
-GWHPCBHR067821
+GWHPEQVL000440
 ```
 2) multiple genes
 ```
 less genes.txt
-GWHPCBHR001935
-GWHPCBHR012253
-GWHPCBHR032614
+GWHPEQVL000440
+GWHPEQVL002200
+GWHPEQVL019729
 ```
 
 ### Output files
 ```
-* results/GWHPCBHR067821.txt         # List of homologous genes
+* results/GWHPEQVL000440.txt         # List of homologous genes
 * results/summary.tsv                # Statistics of homologous genes
 ```
 
