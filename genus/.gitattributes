@@ -1,0 +1,4 @@
+Oryza/*.tsv filter=lfs diff=lfs merge=lfs -text
+Setaria/*.tsv filter=lfs diff=lfs merge=lfs -text
+Solanum/*.tsv filter=lfs diff=lfs merge=lfs -text
+Gossypium/*.tsv filter=lfs diff=lfs merge=lfs -text
