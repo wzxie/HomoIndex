@@ -32,13 +32,11 @@ python HomoIndex.py --genus Brassica --gene_list genes.txt
 usage: HomoIndex.py [-h] --genus GENUS [--gene GENE] [--gene_list GENE_LIST] [--outdir OUTDIR]
 
 options:
-  -h, --help                             Show this help message and exit
-  --genus GENUS, -G GENUS                Target genus name matching subdirectories in ./genus/ (e.g. Brassica, Acacia)
-  --gene GENE, -g GENE                   Single gene ID to query
-  --gene_list GENE_LIST, -l GENE_LIST    Text file containing multiple gene IDs (one ID per line)
-  --outdir OUTDIR, -o OUTDIR             Output directory for query reports (default: .)
-
-See more information at https://github.com/wzxie/HomoIndex.
+  -h, --help                     Show this help message and exit
+  --genus/-G GENUS               Target genus name matching subdirectories in ./genus/ (e.g. Brassica, Acacia)
+  --gene/-g GENE                 Single gene ID to query
+  --gene_list/-l GENE_LIST       Text file containing multiple gene IDs (one ID per line)
+  --outdir/-o OUTDIR             Output directory for query reports (default: .)
 ```
 
 ## Inputs and Outputs
