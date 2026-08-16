@@ -1,14 +1,18 @@
 # HomoIndex
 
 ## Overview
-The widespread issue of data silos significantly hinders the integration and utilization of genomic resources within the same genus. To address this challenge, we developed "HomIndex" to bridge data fragmentation across independent research projects by rapidly identifying orthologous gene mappings among congeneric species.
+**HomoIndex** is a light-weight and efficient tool designed to bridge genomic data fragmentation across independent research projects by rapidly identifying orthologous gene mappings both within the same genus (JCVI) and against model plant species (BLASTP against *Arabidopsis*, *Oryza*, and *Zea*).
+
+## Environment & System Requirements
+* **OS Support:** Linux (x86_64)
+* **Python Version:** Python 3.7+
 
 ## Installation
 Run the following command to install HomIndex.
 ```
 1. git clone https://github.com/wzxie/HomIndex.git
-2. chmod 755 /path/to/HomIndex.py
-3. export PATH=/path/to:$PATH
+2. chmod 755 /path/to/dist/HomIndex.py
+3. export PATH=/path/to/dist:$PATH
 ```
 
 ## Example
@@ -69,25 +73,6 @@ GWHPEQVL019729
 
 
 
-# HomoIndex
 
-**HomoIndex** is a light-weight and efficient tool designed to bridge genomic data fragmentation across independent research projects by rapidly identifying orthologous gene mappings both within the same genus (JCVI) and against model plant species (BLASTP against *Arabidopsis*, *Oryza*, and *Zea*).
-
----
-
-## Environment & System Requirements
-
-* **OS Support:** Linux (x86_64)
-* **Python Version:** Python 3.7+
-* **Dependencies:** `cryptography`
-
----
-
-## Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/wzxie/HomIndex.git](https://github.com/wzxie/HomIndex.git)
-   cd HomIndex
 
 
