@@ -67,3 +67,27 @@ GWHPEQVL019729
 * Zi-Xin Yu:        18713111991@163.com
 * Wen-Zhao Xie:     wzxie@hebtu.edu.cn
 
+
+
+# HomoIndex
+
+**HomoIndex** is a light-weight and efficient tool designed to bridge genomic data fragmentation across independent research projects by rapidly identifying orthologous gene mappings both within the same genus (JCVI) and against model plant species (BLASTP against *Arabidopsis*, *Oryza*, and *Zea*).
+
+---
+
+## Environment & System Requirements
+
+* **OS Support:** Linux (x86_64)
+* **Python Version:** Python 3.7+
+* **Dependencies:** `cryptography`
+
+---
+
+## Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/wzxie/HomIndex.git](https://github.com/wzxie/HomIndex.git)
+   cd HomIndex
+
+
