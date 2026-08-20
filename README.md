@@ -1,64 +1,29 @@
 # HomoIndex
 
 ## Overview
-**HomoIndex** is a light-weight and efficient tool designed to bridge genomic data fragmentation across independent research projects by rapidly identifying orthologous gene mappings both within the same genus (JCVI) and against model plant species (BLASTP against *Arabidopsis*, *Oryza*, and *Zea*).
-
-## Environment & System Requirements
-```
-1. OS Support: Linux (x86_64)
-2. Python Version: Python 3.7+
-```
-
-
-# HomoIndex
-
-## Overview
 **HomoIndex** is a light-weight and efficient tool designed to bridge genomic data fragmentation across independent research projects. It enables rapid identification of orthologous gene mappings both within the same genus (via **JCVI** syntenic blocks) and across model plant species (**BLASTP** against *Arabidopsis thaliana*, *Oryza sativa*, and *Zea mays*).
 
----
 
 ## Key Features
-
 - **Zero Database Setup**: Automatically checks, fetches, and decrypts the required genus-level genomic database from **Zenodo** repositories upon query.
 - **Dual-Layer Homology Assessment**: Combines intra-genus synteny/homology groups (JCVI) with cross-species best hits against model plants (BLASTP).
 - **Lightweight & High-Performance**: Operates on compressed, encrypted SQLite storage without requiring heavy local database servers.
 - **Flexible Workflow**: Supports both single-gene quick queries and high-throughput batch list processing.
 
----
 
 ## System Requirements & Prerequisites
-
 - **OS**: Linux (x86_64) or macOS
 - **Python**: Python 3.7+
-- **Python Dependencies**:
-  - `cryptography` (required for on-the-fly database decryption)
-
-Install missing dependencies via `pip`:
-```bash
-pip install cryptography
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- **Python Dependencies**: `cryptography` (required for on-the-fly database decryption)
 
 
 ## Installation
 ```
-1. git clone https://github.com/wzxie/HomIndex.git
-2. chmod 755 /path/to/dist/HomIndex.py
-3. export PATH=/path/to/dist:$PATH
+git clone https://github.com/wzxie/HomIndex.git
+chmod 755 /path/to/dist/HomIndex.py
+export PATH=/path/to/dist:$PATH
 ```
+
 
 ## Example
 ### 1. Perform a homology search for a single gene.
