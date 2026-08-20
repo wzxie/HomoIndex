@@ -59,7 +59,6 @@ AetT093_7Dv1G030400
 
 ### Output files
 ```
-python HomoIndex.py --genus Aegilops --gene gene-LOC109745798
 ==================== Query Results for (1/1): gene-LOC109745798 ====================
 
 [JCVI Homology Group]: Found 3 clusters
@@ -90,6 +89,6 @@ Zea             Zm00014ba180850                34.62        104        1.6e-18  
 ```
 
 ## Contact
-* Ming-Zhu Yan:     ymz7113@163.com
-* Zi-Xin Yu:        18713111991@163.com
-* Wen-Zhao Xie:     wzxie@hebtu.edu.cn
+* Mingzhu Yan:     ymz7113@163.com
+* Zixin Yu:        18713111991@163.com
+* Wenzhao Xie:     wzxie@hebtu.edu.cn
