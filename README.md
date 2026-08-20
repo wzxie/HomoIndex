@@ -3,19 +3,16 @@
 ## Overview
 **HomoIndex** is a light-weight and efficient tool designed to bridge genomic data fragmentation across independent research projects. It enables rapid identification of orthologous gene mappings both within the same genus (via **JCVI** syntenic blocks) and across model plant species (**BLASTP** against *Arabidopsis thaliana*, *Oryza sativa*, and *Zea mays*).
 
-
 ## Key Features
 - **Zero Database Setup**: Automatically checks, fetches, and decrypts the required genus-level genomic database from **Zenodo** repositories upon query.
 - **Dual-Layer Homology Assessment**: Combines intra-genus synteny/homology groups (JCVI) with cross-species best hits against model plants (BLASTP).
 - **Lightweight & High-Performance**: Operates on compressed, encrypted SQLite storage without requiring heavy local database servers.
 - **Flexible Workflow**: Supports both single-gene quick queries and high-throughput batch list processing.
 
-
 ## System Requirements & Prerequisites
 - **OS**: Linux (x86_64) or macOS
 - **Python**: Python 3.7+
 - **Python Dependencies**: `cryptography` (required for on-the-fly database decryption)
-
 
 ## Installation
 ```
@@ -24,11 +21,10 @@ chmod 755 /path/to/dist/HomIndex.py
 export PATH=/path/to/dist:$PATH
 ```
 
-
 ## Example
 ### 1. Perform a homology search for a single gene.
 ```
-python HomoIndex.py --genus Brassica --gene GWHPEQVL000440
+python HomoIndex.py --genus Aegilops --gene gene-LOC109745798
 ```
 ### 2. Perform a homology search for multiple genes
 ```
@@ -52,23 +48,48 @@ options:
 ### Input files
 1) single gene
 ```
-GWHPEQVL000440
+gene-LOC109745798
 ```
 2) multiple genes
 ```
 less genes.txt
-GWHPEQVL000440
-GWHPEQVL002200
-GWHPEQVL019729
+gene-LOC109745798
+AetT093_7Dv1G030400
 ```
 
 ### Output files
 ```
-* GWHPEQVL000440.txt         # List of homologous genes
+python HomoIndex.py --genus Aegilops --gene gene-LOC109745798
+==================== Query Results for (1/1): gene-LOC109745798 ====================
+
+[JCVI Homology Group]: Found 3 clusters
+species gene ID
+Aegilops_tauschii-20171101      gene-LOC109745798
+Aegilops_tauschii-20210527      AetT093_7Dv1G030400
+Aegilops_umbellulata    AeUmb.TA1851.r1.7UG0045140
+
+[BLASTP Best Hits]: Found 15 matches
+Model Plant     Subject ID                     Identity(%)  AlignLen   E-value      BitScore
+------------------------------------------------------------------------------------------
+Arabidopsis     AT1G03430                      51.55        97         2.6e-26      97.1
+Arabidopsis     AT3G29350                      48.45        97         1.4e-24      92.8
+Arabidopsis     AT3G21510                      48.08        104        3.0e-24      91.7
+Arabidopsis     AT5G39340                      50.52        97         2.5e-23      90.9
+Arabidopsis     AT3G16360                      37.04        108        7.4e-23      87.8
+Oryza           AGIS_Os08g041290               63.64        110        6.4e-47      150.0
+Oryza           AGIS_Os09g043710               58.56        111        3.1e-40      133.0
+Oryza           AGIS_Os01g046620               36.54        104        4.5e-20      82.0
+Oryza           AGIS_Os05g008160               37.50        104        4.5e-20      82.0
+Oryza           AGIS_Os05g038960               37.50        104        8.7e-20      81.3
+Zea             Zm00014ba203390                65.45        110        4.3e-48      152.0
+Zea             Zm00014ba124660                58.04        112        2.9e-40      132.0
+Zea             Zm00014ba038710                61.96        92         7.4e-36      121.0
+Zea             Zm00014ba307920                35.19        108        4.9e-19      78.6
+Zea             Zm00014ba180850                34.62        104        1.6e-18      77.4
+=====================================================================================
 ```
 
 ## Contact
-* Yue-Miao Zhang:   13091255317@163.com
 * Ming-Zhu Yan:     ymz7113@163.com
 * Zi-Xin Yu:        18713111991@163.com
 * Wen-Zhao Xie:     wzxie@hebtu.edu.cn
