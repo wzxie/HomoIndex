@@ -4,15 +4,15 @@
 **HomoIndex** is a light-weight and efficient tool designed to bridge genomic data fragmentation across independent research projects. It enables rapid identification of orthologous gene mappings both within the same genus (via **JCVI** syntenic blocks) and across model plant species (**BLASTP** against *Arabidopsis thaliana*, *Oryza sativa*, and *Zea mays*).
 
 ## Key Features
-- **Zero Database Setup**: Automatically checks, fetches, and decrypts the required genus-level genomic database from **Zenodo** repositories upon query.
+- **Zero Database Setup**: Automatically checks for the required genus-level genomic database and, if it is missing, fetches the plaintext SQLite file from **Zenodo**.
 - **Dual-Layer Homology Assessment**: Combines intra-genus synteny/homology groups (JCVI) with cross-species best hits against model plants (BLASTP).
-- **Lightweight & High-Performance**: Operates on compressed, encrypted SQLite storage without requiring heavy local database servers.
+- **Lightweight & High-Performance**: Queries local SQLite databases directly, without a database server or a decryption step.
 - **Flexible Workflow**: Supports both single-gene quick queries and high-throughput batch list processing.
 
 ## System Requirements & Prerequisites
 - **OS**: Linux (x86_64) or macOS
 - **Python**: Python 3.7+
-- **Python Dependencies**: `cryptography` (required for on-the-fly database decryption)
+- **Python Dependencies**: None
 
 ## Installation
 ```
@@ -28,7 +28,7 @@ python HomoIndex.py --genus Aegilops --gene gene-LOC109745798
 ```
 ### 2. Perform a homology search for multiple genes
 ```
-python HomoIndex.py --genus Brassica --gene_list genes.txt
+python HomoIndex.py --genus Aegilops --gene_list genes.txt
 ```
 
 ## Usage
@@ -85,7 +85,7 @@ Zea             Zm00014ba124660                58.04        112        2.9e-40  
 Zea             Zm00014ba038710                61.96        92         7.4e-36      121.0
 Zea             Zm00014ba307920                35.19        108        4.9e-19      78.6
 Zea             Zm00014ba180850                34.62        104        1.6e-18      77.4
-=====================================================================================
+======================================================================
 ```
 
 ## Contact
