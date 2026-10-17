@@ -16,8 +16,8 @@
 
 ## Installation
 ```
-git clone https://github.com/wzxie/HomIndex.git
-chmod 755 /path/to/dist/HomIndex.py
+git clone https://github.com/wzxie/HomoIndex.git
+chmod 755 /path/to/dist/HomoIndex.py
 export PATH=/path/to/dist:$PATH
 ```
 
